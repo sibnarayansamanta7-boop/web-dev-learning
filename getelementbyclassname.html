@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hear we write getelementbyid a selective element</title>
+</head>
+<body>
+    <div class="container" >
+        <div id="box1" class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <button onclick="magic()">Do the Magic</button>
+        </div>
+   <!-- this is a getElementByClassName example -->
+    <script>
+//now only three are important 1:-getelementbytagname 2:-queryselector 3:-queryselectorall
+
+
+    function magic() {
+        let b1 = Array.from(document.getElementsByClassName("box"));
+        for(element of b1){
+            console.log(element.innerHTML);
+            element.innerHTML="This is " +element.innerHTML;
+        }
+    }
+    
+
+   
+    
+
+</script>
+</body>
+</html>

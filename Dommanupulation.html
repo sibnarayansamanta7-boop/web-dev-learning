@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce to Textcontent innerHTML value and Style</title>
+</head>
+<body>
+    <div>
+        <div class="Welcome">Welcome To My Form</div>
+        <form action="">
+            <input type="text" id="Username" value="Sibu">
+            <input type="submit" id="submit" value="submit">
+        </form>
+    </div>
+
+    <script>
+        const Welcome = document.getElementById("Welcome")
+        console.log(Welcome)
+        Welcome.innerHTML="<h1> Enter your info </h1>"
+        Welcome.textContent = "Fill the form"
+
+        Welcome.style.backgroundColor= "red"
+    </script>
+</body>
+</html>
