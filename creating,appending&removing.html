@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Appending and Removing Element in JS</title>
+</head>
+<body>
+    <div id="djk" class="Container">
+        <div>BOX 1</div>
+        <div id="box2">BOX 2</div>
+        <div>BOX 3</div>
+        <div>BOX 4</div>
+    </div>
+<script>
+ let container = document.querySelector(".Container")
+ let newdiv = document.createElement("div")
+ newdiv.textContent="BOX 5"
+ container.appendChild(newdiv) //this add box5
+
+container.prepend(newdiv)   //(this add box5 in first position)
+
+container.removeChild(newdiv) //this remove box5
+
+let box2 = document.getElementById("box2")
+container.removeChild(box2) //this remove box2 only give an id in box2
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with attributes and classes in java script</title>
+</head>
+<style>
+    .red{
+        border: 30px solid red;
+        padding: 10px;
+        margin: auto;
+    }
+    .green{
+        border: 30px solid green;
+        padding: 10px;
+        margin: auto;
+    }
+
+</style>
+<body>
+    <div id="get" class="container">
+        <div>We write a form and put a image </div>
+        <form action="">
+            <input type="text" id="name" value="sibu">
+            <input type="submit" id="submit" value="submit">
+
+        </form>
+        <div>
+        <img id="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUsbmTZu_uMrmJ0z--CrG-o1UIXytu1OCizQ&s" alt="bird">
+        <button id="btn" onclick="funk1()">add green</button>
+        </div>
+    </div>
+    <script>
+        const img = document.getElementById("image");
+        img.setAttribute("alt", "this is a bird");
+       // img.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdUY6-53NESEHhJDAyfXsJigOm9_okUAsgjw&s") {this can change image also}
+       // img.classList.add("green");
+       function funk1() {
+        
+           img.classList.toggle("green");
+           if(img.classList.contains("green")){
+               document.getElementById("btn").innerText = "remove green";
+           }
+           else{
+               document.getElementById("btn").innerText = "add green";
+           }
+       }
+       
+    </script>
+</body>
+</html>
