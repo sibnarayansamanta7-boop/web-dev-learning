@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and Delegation in JavaScript</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            color: rgb(32, 240, 32);
+            margin: 30px;
+            padding: 40px;
+            width: 80px;
+            height: 30px;
+            background-color: brown;
+        }
+    </style>
+    <div class="container">
+        <div id="boxs" class="box"> Box1</div>
+        <div class="box"> Box2</div>
+        <div class="box"> Box3</div>
+    </div>
+
+    <script>
+        const container = document.querySelector(".container");
+        const boxs = document.getElementById("boxs");
+        container.addEventListener("click", (e) => {
+            console.log("container was clicked");
+            console.log(e.target);
+            e.target.innerText = "I was clicked !"
+        })
+        //Event bubbling in java script
+
+        boxs.addEventListener("click", (event) => {
+            event.stopPropagation();
+            console.log("box was clicked");
+        })
+
+
+
+    </script>
+</body>
+
+</html>

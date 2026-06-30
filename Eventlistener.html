@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListener in java script</title>
+</head>
+<style>
+    .box {
+        height: 50px;
+        width: 200px;
+        color: rgb(244, 11, 11);
+        margin: 20px;
+        background-color: green;
+        padding: 30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="sibu" class="box"> Box1</div>
+        <div id="boxy" class="box"> Box2</div>
+        <div class="box"> Box3</div>
+        <div class="box"> Box4</div>
+        <div class="box"> Box5</div>
+    </div>
+
+    <span id="clickMe">Click me </span>
+    <input type="text" id="nice">
+
+    <script>
+        let sibu = document.getElementById("sibu")
+        let clickMe = document.getElementById("clickMe")
+        sibu.addEventListener('click', () => {
+            alert("Fuck You !")
+            sibu.innerText = "click on me you busterd"
+        })
+        clickMe.addEventListener('click', () => {
+            alert("Fuck You !")
+        })
+        let nice = document.getElementById("nice")
+        nice.addEventListener("keyup", (event) => {
+            //alert("Key press ")   //For that we always get an alert whenever we click it
+            console.log(event.key)  //it give output in console
+        })
+
+        let boxy = document.getElementById("boxy")
+        boxy.addEventListener("mouseover", () => {
+            boxy.style.backgroundColor = "aquamarine"
+        })
+        //whenever we curse the mouse over the box box ter aqua
+
+        boxy.addEventListener("mouseleave", () => {
+            boxy.style.backgroundColor = "green"
+        })
+
+    </script>
+</body>
+
+</html>
